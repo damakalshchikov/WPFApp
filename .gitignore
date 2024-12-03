@@ -1,0 +1,46 @@
+﻿# JetBrains
+/.idea/.idea.WpfApp/.idea/encodings.xml
+/.idea/.idea.WpfApp/.idea/indexLayout.xml
+/.idea/.idea.WpfApp/.idea/projectSettingsUpdater.xml
+/.idea/.idea.WpfApp/.idea/vcs.xml
+/.idea/.idea.WpfApp/.idea/workspace.xml
+
+# bin
+/WpfApp/bin/Debug/net9.0-windows/WpfApp.deps.json
+/WpfApp/bin/Debug/net9.0-windows/WpfApp.dll
+/WpfApp/bin/Debug/net9.0-windows/WpfApp.exe
+/WpfApp/bin/Debug/net9.0-windows/WpfApp.pdb
+/WpfApp/bin/Debug/net9.0-windows/WpfApp.runtimeconfig.json
+
+# obj
+/WpfApp/obj/Debug/net9.0-windows/ref/WpfApp.dll
+/WpfApp/obj/Debug/net9.0-windows/refint/WpfApp.dll
+/WpfApp/obj/Debug/net9.0-windows/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+/WpfApp/obj/Debug/net9.0-windows/App.g.cs
+/WpfApp/obj/Debug/net9.0-windows/apphost.exe
+/WpfApp/obj/Debug/net9.0-windows/MainWindow.baml
+/WpfApp/obj/Debug/net9.0-windows/MainWindow.g.cs
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.AssemblyInfo.cs
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.AssemblyInfoInputs.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.assets.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.csproj.CoreCompileInputs.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.csproj.FileListAbsolute.txt
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.dll
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.g.resources
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.GeneratedMSBuildEditorConfig.editorconfig
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.genruntimeconfig.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.GlobalUsings.g.cs
+/WpfApp/obj/Debug/net9.0-windows/WpfApp.pdb
+/WpfApp/obj/Debug/net9.0-windows/WpfApp_z1naq4sd_wpftmp.AssemblyInfo.cs
+/WpfApp/obj/Debug/net9.0-windows/WpfApp_z1naq4sd_wpftmp.AssemblyInfoInputs.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp_z1naq4sd_wpftmp.assets.cache
+/WpfApp/obj/Debug/net9.0-windows/WpfApp_z1naq4sd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig
+/WpfApp/obj/Debug/net9.0-windows/WpfApp_z1naq4sd_wpftmp.GlobalUsings.g.cs
+/WpfApp/obj/project.assets.json
+/WpfApp/obj/project.nuget.cache
+/WpfApp/obj/project.packagespec.json
+/WpfApp/obj/rider.project.model.nuget.info
+/WpfApp/obj/rider.project.restore.info
+/WpfApp/obj/WpfApp.csproj.nuget.dgspec.json
+/WpfApp/obj/WpfApp.csproj.nuget.g.props
+/WpfApp/obj/WpfApp.csproj.nuget.g.targets
