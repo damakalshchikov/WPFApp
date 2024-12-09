@@ -16,8 +16,38 @@ namespace WpfApp;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private string? _currentInput = "";
     public MainWindow()
     {
         InitializeComponent();
+    }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+        var button = sender as Button;
+        var content = button?.Content.ToString();
+
+        if (content == "=")
+        {
+            try
+            {
+                _currentInput = new DataTable().Compute(_currentInput, null).ToString();
+                Display.Text = _currentInput;
+            }
+            catch
+            {
+                Display.Text = "Error";
+            }
+        }
+        else if (content == "C")
+        {
+            _currentInput = "";
+            Display.Text = "";
+        }
+        else
+        {
+            _currentInput += content;
+            Display.Text = _currentInput;
+        }
     }
 }
