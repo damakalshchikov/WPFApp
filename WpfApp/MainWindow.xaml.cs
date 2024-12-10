@@ -10,6 +10,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using WpfApp.Utils;
+
 namespace WpfApp;
 
 /// <summary>
@@ -31,19 +33,22 @@ public partial class MainWindow : Window
         if (content == "=")
         {
             try
-            {
+            {   
+                _currentInput = StringHelper.SanitizeInput(_currentInput);
                 _currentInput = new DataTable().Compute(_currentInput, null).ToString();
-                Display.Text = _currentInput;
+                Display.Text = StringHelper.FormatOutput(_currentInput);
+                _currentInput = "";
             }
             catch
             {
                 Display.Text = "Error";
+                _currentInput = "";
             }
         }
-        else if (content == "C")
+        else if (content == "AC")
         {
             _currentInput = "";
-            Display.Text = "";
+            Display.Text = "0";
         }
         else
         {
