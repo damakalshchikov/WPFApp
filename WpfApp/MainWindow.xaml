@@ -1,5 +1,5 @@
 ﻿<Window
-    Background="Gray"
+    Background="#1C1C1C"
     Height="500"
     Title="Калькулятор"
     Width="350"
