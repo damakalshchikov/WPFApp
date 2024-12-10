@@ -2,7 +2,6 @@
     StartupUri="MainWindow.xaml"
     x:Class="WpfApp.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:local="clr-namespace:WpfApp"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
         <!--  Стиль для кнопок  -->
@@ -11,10 +10,24 @@
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="Width" Value="70" />
             <Setter Property="Height" Value="70" />
-            <Setter Property="Margin" Value="5" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="Background" Value="#505050" />
+            <!--  Закругление для кнопок  -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="35"
+                            Padding="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
         <!--  Стиль для кнопок с операциями  -->
