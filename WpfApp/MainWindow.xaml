@@ -50,14 +50,24 @@
             <!--  Первая строка  -->
             <Button
                 Click="Button_Click"
-                Content="C"
+                Content="AC"
                 Grid.Column="0"
                 Grid.Row="0"
-                Style="{StaticResource ClearButtonStyle}" />
-
+                Style="{StaticResource TopButtonsStyle}" />
+            <Button
+                Content="+/-"
+                Grid.Column="1"
+                Grid.Row="0"
+                Style="{StaticResource TopButtonsStyle}" />
             <Button
                 Click="Button_Click"
-                Content="/"
+                Content="%"
+                Grid.Column="2"
+                Grid.Row="0"
+                Style="{StaticResource TopButtonsStyle}" />
+            <Button
+                Click="Button_Click"
+                Content="÷"
                 Grid.Column="3"
                 Grid.Row="0"
                 Style="{StaticResource OperationButtonStyle}" />
@@ -154,7 +164,7 @@
                 Style="{StaticResource ButtonStyle}" />
             <Button
                 Click="Button_Click"
-                Content="."
+                Content=","
                 Grid.Column="2"
                 Grid.Row="4"
                 Style="{StaticResource ButtonStyle}" />
@@ -163,7 +173,7 @@
                 Content="="
                 Grid.Column="3"
                 Grid.Row="4"
-                Style="{StaticResource EqualsButtonStyle}" />
+                Style="{StaticResource OperationButtonStyle}" />
         </Grid>
     </Grid>
 </Window>
