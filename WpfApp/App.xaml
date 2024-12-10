@@ -14,7 +14,7 @@
             <Setter Property="Margin" Value="5" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Background" Value="DarkGray" />
+            <Setter Property="Background" Value="#505050" />
         </Style>
 
         <!--  Стиль для кнопок с операциями  -->
@@ -22,23 +22,15 @@
             BasedOn="{StaticResource ButtonStyle}"
             TargetType="Button"
             x:Key="OperationButtonStyle">
-            <Setter Property="Background" Value="LightSlateGray" />
+            <Setter Property="Background" Value="#FF9500" />
         </Style>
 
-        <!--  Стиль для кнопки "="  -->
+        <!--  Стиль для кнопок, которые расположены в самом верху  -->
         <Style
             BasedOn="{StaticResource ButtonStyle}"
             TargetType="Button"
-            x:Key="EqualsButtonStyle">
-            <Setter Property="Background" Value="YellowGreen" />
-        </Style>
-
-        <!--  Стиль для кнопки "C"  -->
-        <Style
-            BasedOn="{StaticResource ButtonStyle}"
-            TargetType="Button"
-            x:Key="ClearButtonStyle">
-            <Setter Property="Background" Value="Orange" />
+            x:Key="TopButtonsStyle">
+            <Setter Property="Background" Value="#D4D4D2" />
         </Style>
     </Application.Resources>
 
