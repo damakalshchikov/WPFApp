@@ -28,12 +28,15 @@
         BorderBrush="#1C1C1C"
         BorderThickness="2"
         CornerRadius="20">
+
+        <!--  Сетка для кнопки закрытия, текстбокса и остальный вложенных элементов  -->
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
+            <!--  Кнопка закрытия  -->
             <Button
                 Background="Red"
                 Click="CloseButton_Click"
@@ -44,6 +47,7 @@
                 Style="{StaticResource ButtonStyle}"
                 VerticalAlignment="Top"
                 Width="5" />
+
             <!--  Экран  -->
             <TextBox
                 Background="#1C1C1C"
@@ -59,7 +63,7 @@
                 Text="0"
                 VerticalContentAlignment="Center" />
 
-            <!--  Кнопки  -->
+            <!--  Сетка для кнопок  -->
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition />
