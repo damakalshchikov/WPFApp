@@ -45,6 +45,30 @@
             x:Key="TopButtonsStyle">
             <Setter Property="Background" Value="#D4D4D2" />
         </Style>
+
+        <!--  Стиль для кнопок, которые расположены в доп. окне  -->
+        <Style
+            BasedOn="{StaticResource ButtonStyle}"
+            TargetType="Button"
+            x:Key="ScientificButton">
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="Width" Value="60" />
+            <Setter Property="Height" Value="40" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20"
+                            Padding="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 
 </Application>
