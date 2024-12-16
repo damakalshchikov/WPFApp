@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Data;
+using System.Text.RegularExpressions;
+using MathNet.Numerics;
 
 namespace WpfApp.Utils;
 
@@ -27,7 +29,7 @@ public class StringHelper
             }
         );
         
-        // Замена символа % на выражение <число>/100
+        // Замена "%" на выражение <число>/100
         input = Regex.Replace(
             input,
             @"(\d+(\.\d+)?)%",
@@ -43,7 +45,7 @@ public class StringHelper
 
     public static string FormatOutput(string output)
     {
-        // Замена . на , в output
+        // Замена "." на "," в output
         return Regex.Replace(output, @"\.", ",");
     }
 }
