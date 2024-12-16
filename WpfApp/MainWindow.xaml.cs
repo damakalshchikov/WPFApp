@@ -34,7 +34,16 @@ public partial class MainWindow : Window
             {   
                 _currentInput = StringHelper.SanitizeInput(_currentInput);
                 _currentInput = new DataTable().Compute(_currentInput, null).ToString();
-                Display.Text = StringHelper.FormatOutput(_currentInput);
+                
+                if (Regex.IsMatch(_currentInput, @"E-([1-9]|1[0-9])$"))
+                {
+                    Display.Text = "0";
+                }
+                else
+                {
+                    Display.Text = StringHelper.FormatOutput(_currentInput);   
+                }
+                
                 _currentInput = "";
             }
             catch
@@ -50,12 +59,50 @@ public partial class MainWindow : Window
         }
         else
         {
-            _currentInput += content;
+            if (content == "x²")
+            {
+                _currentInput = $"{_currentInput}²";
+            }
+            else if (content == "xⁿ")
+            {
+                _currentInput = $"{_currentInput}^";
+            }
+            else if (content == "x!")
+            {
+                _currentInput = $"{_currentInput}!";
+            }
+            else if (content == "1/x")
+            {
+                _currentInput = $"{_currentInput}/";
+            }
+            else if (content == "sin" || content == "cos" || content == "tg")
+            {
+                switch (content)
+                {
+                    case "sin":
+                        _currentInput = $"sin({_currentInput})";
+                        break;
+                    case "cos":
+                        _currentInput = $"cos({_currentInput})";
+                        break;
+                    case "tg":
+                        _currentInput = $"tg({_currentInput})";
+                        break;
+                }
+            }
+            else if (content == "ln")
+            {
+                _currentInput = $"ln({_currentInput})";
+            }
+            else
+            {
+                _currentInput += content;
+            }
+            
             Display.Text = _currentInput;
         }
     }
     
-    private void OpenScientificWindow(object sender, RoutedEventArgs e)
     // Открытие или закрытие окна с доп. функциями
     private void OpenOrCloseScientificWindow(object sender, RoutedEventArgs e)
     {
