@@ -63,16 +63,19 @@
 
                 <!--  Первая строка  -->
                 <Button
+                    Click="ScientificButton_Click"
                     Content="x²"
                     Grid.Column="0"
                     Grid.Row="0"
                     Style="{StaticResource ScientificButton}" />
                 <Button
+                    Click="ScientificButton_Click"
                     Content="xⁿ"
                     Grid.Column="1"
                     Grid.Row="0"
                     Style="{StaticResource ScientificButton}" />
                 <Button
+                    Click="ScientificButton_Click"
                     Content="x!"
                     Grid.Column="2"
                     Grid.Row="0"
@@ -80,16 +83,19 @@
 
                 <!--  Вторая строка  -->
                 <Button
+                    Click="ScientificButton_Click"
                     Content="("
                     Grid.Column="0"
                     Grid.Row="1"
                     Style="{StaticResource ScientificButton}" />
                 <Button
+                    Click="ScientificButton_Click"
                     Content=")"
                     Grid.Column="1"
                     Grid.Row="1"
                     Style="{StaticResource ScientificButton}" />
                 <Button
+                    Click="ScientificButton_Click"
                     Content="1/x"
                     Grid.Column="2"
                     Grid.Row="1"
