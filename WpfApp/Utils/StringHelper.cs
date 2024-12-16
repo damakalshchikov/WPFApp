@@ -32,7 +32,6 @@ public class StringHelper
                 }
             }
         );
-        Console.WriteLine(input);
         
         input = ReplaceBaseSymbols(input);
         
@@ -125,7 +124,6 @@ public class StringHelper
                 return $"({number}/100)";
             }
         );
-        
         return input;
     }
 
