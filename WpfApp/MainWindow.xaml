@@ -184,7 +184,7 @@
 
                 <!--  Пятая строка  -->
                 <Button
-                    Click="OpenScientificWindow"
+                    Click="OpenOrCloseScientificWindow"
                     Grid.Column="0"
                     Grid.Row="4"
                     Style="{StaticResource ButtonStyle}">

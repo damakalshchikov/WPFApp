@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,13 +14,16 @@ public partial class MainWindow : Window
 {
     private string? _currentInput = "";
     private ScientificWindow? _scientificWindow;
+    
+    // Запуск
     public MainWindow()
     {
         InitializeComponent();
         Closed += MainWindow_Closed;
     }
-
-    private void Button_Click(object sender, RoutedEventArgs e)
+    
+    // Обработчик кнопок калькулятора
+    public void Button_Click(object sender, RoutedEventArgs e)
     {
         var button = sender as Button;
         var content = button?.Content.ToString();
@@ -52,6 +56,8 @@ public partial class MainWindow : Window
     }
     
     private void OpenScientificWindow(object sender, RoutedEventArgs e)
+    // Открытие или закрытие окна с доп. функциями
+    private void OpenOrCloseScientificWindow(object sender, RoutedEventArgs e)
     {
         if (_scientificWindow == null) // Если окно ещё не открыто
         {
@@ -66,13 +72,14 @@ public partial class MainWindow : Window
         }
     }
 
-    
+    // Перемещение окна ЛКМ
     private void Window_MouseDown(object sender, MouseButtonEventArgs e)
     {
         if (e.LeftButton == MouseButtonState.Pressed)
             DragMove();
     }
     
+    // Закртыие доп. окна, если главное окно закрылось
     private void MainWindow_Closed(object? sender, EventArgs e)
     {
         if (_scientificWindow != null)
@@ -82,6 +89,7 @@ public partial class MainWindow : Window
         }
     }
     
+    // Обработчик кнокпки закрытия главного окна
     private void CloseButton_Click(object sender, RoutedEventArgs e)
     {
         Close();
