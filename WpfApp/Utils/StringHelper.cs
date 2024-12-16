@@ -132,4 +132,23 @@ public class StringHelper
         // Замена "." на "," в output
         return Regex.Replace(output, @"\.", ",");
     }
+
+    private static string ReplaceBaseSymbols(string str)
+    {
+         // Замена символов "+×," на "/*."
+        return Regex.Replace(
+            str,
+            @"[÷×,]",
+            match =>
+            {
+                return match.Value switch
+                {
+                    "÷" => "/",
+                    "×" => "*",
+                    "," => ".",
+                    _ => match.Value
+                };
+            }
+        );
+    }
 }
