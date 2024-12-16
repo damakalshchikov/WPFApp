@@ -6,11 +6,14 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <ApplicationIcon>Images\appIcon.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
       <None Remove="Images\calc.png" />
       <Resource Include="Images\calc.png" />
+      <None Remove="Images\appIcon.ico" />
+      <Resource Include="Images\appIcon.ico" />
     </ItemGroup>
 
     <ItemGroup>
