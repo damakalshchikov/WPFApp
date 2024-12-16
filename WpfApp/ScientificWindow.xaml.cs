@@ -5,6 +5,7 @@ namespace WpfApp;
 
 public partial class ScientificWindow : Window
 {
+    // Запуск
     public ScientificWindow()
     {
         InitializeComponent();
@@ -15,7 +16,8 @@ public partial class ScientificWindow : Window
         if (e.LeftButton == MouseButtonState.Pressed)
             DragMove();
     }
-
+    
+    // Обработчик кнопки закрытия окна с доп. функциями
     private void CloseButton_Click(object sender, RoutedEventArgs e)
     {
         Close();
