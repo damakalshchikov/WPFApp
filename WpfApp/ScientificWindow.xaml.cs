@@ -10,7 +10,14 @@ public partial class ScientificWindow : Window
     {
         InitializeComponent();
     }
-
+    
+    // Обработка кнопок доп. функций
+    private void ScientificButton_Click(object sender, RoutedEventArgs e)
+    {   
+        ((MainWindow)Application.Current.MainWindow)?.Button_Click(sender, e);
+    }
+    
+    // Перемещение окна ЛКМ
     private void Window_MouseDown(object sender, MouseButtonEventArgs e)
     {
         if (e.LeftButton == MouseButtonState.Pressed)
